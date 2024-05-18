@@ -90,7 +90,7 @@ export const Navbar = () => {
                 <Link
                   href={link.path}
                   className={`font-semibold text-[#f19d00] ${
-                    router.pathname === link.path
+                    router.pathname === link.path 
                       ? "border-b-4 border-[#0053F1] py-2"
                       : ""
                   }`}
