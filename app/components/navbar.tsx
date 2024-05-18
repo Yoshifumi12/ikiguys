@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { useRouter, NextRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { BiLogoBlogger } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
@@ -14,7 +13,6 @@ const navigationLinks = [
 ];
 
 export const Navbar = () => {
-  const router: NextRouter = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
