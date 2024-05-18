@@ -89,11 +89,7 @@ export const Navbar = () => {
               <li key={link.path} className="text-md my-6 ml-10">
                 <Link
                   href={link.path}
-                  className={`font-semibold text-[#f19d00] ${
-                    router.pathname === link.path
-                      ? "border-b-4 border-[#0053F1] py-2"
-                      : ""
-                  }`}
+                  className={`font-semibold text-[#f19d00] `}
                 >
                   {link.text}
                 </Link>
