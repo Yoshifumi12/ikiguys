@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter, NextRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { BiLogoBlogger } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
@@ -14,7 +14,7 @@ const navigationLinks = [
 ];
 
 export const Navbar = () => {
-  const router = useRouter();
+  const router: NextRouter = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
@@ -90,7 +90,7 @@ export const Navbar = () => {
                 <Link
                   href={link.path}
                   className={`font-semibold text-[#f19d00] ${
-                    router.pathname === link.path 
+                    router.pathname === link.path
                       ? "border-b-4 border-[#0053F1] py-2"
                       : ""
                   }`}
