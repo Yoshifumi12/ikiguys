@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { BiLogoBlogger } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
