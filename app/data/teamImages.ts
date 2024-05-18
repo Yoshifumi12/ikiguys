@@ -5,7 +5,7 @@ export const teamImages = [
     position: "CEO / Engineer",
   },
   {
-    image: "Nico.jpg",
+    image: "nicos.jpg",
     name: "Nicos C. David",
     position: "Customer Development",
   },
