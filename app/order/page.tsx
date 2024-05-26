@@ -30,6 +30,7 @@ const Order: React.FC = () => {
   });
 
   const [chosenFilling, setChosenFilling] = useState<Filling[]>([]);
+  const [order, setOrder] = useState("");
 
   const handleBreadButtonClick = () => {
     setIsNumberModalOpen(true);
@@ -49,20 +50,27 @@ const Order: React.FC = () => {
 
   const handleBreadSubmit = (bread: FillingNumber) => {
     setChosenNumber(bread);
-    setChosenFilling(
-      new Array(bread.value).fill({
-        name: "Choose Filling",
-        image: "placeholder.png",
-      })
-    );
+    setOrder(bread.name);
     setIsNumberModalOpen(false);
   };
 
-  const handleFillingSubmit = (index: number, filling: Filling) => {
-    const newChosenFilling = [...chosenFilling];
-    newChosenFilling[index] = filling;
-    setChosenFilling(newChosenFilling);
-    setIsFillingModalOpen(false);
+  const handleFillingSubmit = (filling: Filling) => {
+    const updatedChosenFillings = [...chosenFilling, filling];
+
+    // Check if the number of chosen fillings exceeds the chosen number value
+    if (updatedChosenFillings.length <= chosenNumber.value) {
+      setChosenFilling(updatedChosenFillings);
+
+      // If the limit is not exceeded, update the order
+      const fillingNames = updatedChosenFillings.map((filling) => filling.name);
+      const orderText = fillingNames.join(", ");
+      setOrder(`${chosenNumber.name}    ${orderText}`);
+
+      // If the chosen fillings reach the limit, close the filling modal
+      if (updatedChosenFillings.length === chosenNumber.value) {
+        setIsFillingModalOpen(false);
+      }
+    }
   };
 
   const increaseQuantity = () => {
@@ -162,9 +170,8 @@ const Order: React.FC = () => {
       </div>
 
       {/* Filling Section */}
-      {chosenFilling.map((filling, index) => (
+      {chosenNumber.value != 0 && (
         <div
-          key={index}
           style={{
             backgroundImage: "url('filling-bg.png')",
             backgroundSize: "cover",
@@ -182,17 +189,17 @@ const Order: React.FC = () => {
                 className="mt-6 block w-72 rounded-2xl bg-yellow-800 py-2 text-lg font-semibold text-white hover:bg-blue-900 md:mb-6 md:w-80 md:py-3"
                 onClick={handleFillingButtonClick}
               >
-                Choose Filling Type
+                Choose Flavor
               </button>
             </div>
-            <div className="w-full md:w-1/2 md:max-w-[580px] xl:mr-20">
+            <div className="w-full md:w-1/2 md:max-w-[580px] md:mr-20">
               <p className="mb-2 mt-4 text-2xl font-medium text-gray-800 sm:text-3xl md:mt-0 md:text-4xl lg:text-5xl">
-                {filling.name}
+                Choose Flavor
               </p>
               <img
-                src={filling.image}
+                src=""
                 className="h-[345px] w-full rounded-lg object-cover"
-                alt={filling.name}
+                alt=""
               />
             </div>
           </div>
@@ -211,9 +218,7 @@ const Order: React.FC = () => {
                     >
                       <div className="transform rounded-lg p-4 shadow transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105">
                         <button
-                          onClick={() =>
-                            handleFillingSubmit(index, fillingOption)
-                          }
+                          onClick={() => handleFillingSubmit(fillingOption)}
                         >
                           <img
                             className="object-cover h-40 w-40 sm:h-56 sm:w-[280px] lg:w-[300px] rounded-t-lg"
@@ -240,11 +245,13 @@ const Order: React.FC = () => {
             </div>
           )}
         </div>
-      ))}
+      )}
 
       <div className="z-10 flex h-64  flex-col items-center bg-gray-50 bg-cover bg-center shadow md:h-64">
         <div className="mb-12 flex flex-col items-center justify-center">
           {/* Quantity Selector */}
+          <p>{order}</p>
+
           <div className="mb-4 mt-[65px] flex items-center text-3xl font-medium text-gray-800 sm:text-sm md:mt-[100px] lg:text-xl">
             <button
               className="px-4 py-2 bg-gray-300 rounded-l hover:bg-gray-400"
@@ -273,9 +280,9 @@ const Order: React.FC = () => {
           </button>
         </div>
       </div>
-      <div>
+      <div className="mt-60">
         <Footer />
-        </div>
+      </div>
     </>
   );
 };
