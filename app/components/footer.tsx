@@ -49,10 +49,12 @@ export const Footer = () => {
               >
                 <AiFillInstagram size={22} />
               </Link>
-
             </div>
           </div>
         </div>
+      </div>
+      <div className="mt-auto text-center text-gray-300">
+        © {new Date().getFullYear()} Ikiguys. All rights reserved.
       </div>
     </footer>
   );

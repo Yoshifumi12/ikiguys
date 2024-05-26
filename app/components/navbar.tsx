@@ -135,13 +135,13 @@ export const Navbar = () => {
                   className="flex items-center justify-between"
                   onClick={closeMenu}
                 >
-                  <li className="flex cursor-pointer items-center text-base font-medium text-[#07549C]">
+                  <li className="flex cursor-pointer items-center text-base font-medium text-[#9c8107]">
                     <span className="ml-6">{link.icon}</span>
                     <span className="ml-6"> {link.text}</span>
                   </li>
                   <HiArrowNarrowRight
                     size={34}
-                    className="mr-6 rounded-full bg-gray-100 px-2 py-1 text-[#07549C] transition-transform hover:scale-110"
+                    className="mr-6 rounded-full bg-gray-100 px-2 py-1 text-[#9c8107] transition-transform hover:scale-110"
                   />
                 </div>
                 <hr className="mx-3 my-5 border-t border-dashed border-gray-500"></hr>

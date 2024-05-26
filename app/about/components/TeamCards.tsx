@@ -23,7 +23,7 @@ const TeamCards = () => {
                 <div className="flex flex-col items-center justify-center">
                   <img
                     src={member.image}
-                    className="h-52 w-52 rounded-full shadow-lg"
+                    className="h-52 w-52 shadow-lg"
                     alt={member.name}
                   />
                   <div className="w-full p-1 group-hover:opacity-100">
