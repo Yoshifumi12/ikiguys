@@ -1,22 +1,22 @@
 export const fillingData = [
   {
-    name: "Plain",
-    image: "placeholder.png",
+    name: "Watermelon",
+    image: "watermelon.jpeg",
+  },
+  {
+    name: "Mango",
+    image: "mango.jpg",
   },
   {
     name: "Chocolate",
-    image: "placeholder.png",
+    image: "chocolate.jpeg",
+  },
+  {
+    name: "Caramel",
+    image: "caramel.jpg",
   },
   {
     name: "Strawberry",
-    image: "placeholder.png",
-  },
-  {
-    name: "Vanilla",
-    image: "placeholder.png",
-  },
-  {
-    name: "Apple",
-    image: "placeholder.png",
+    image: "strawberry.png",
   },
 ];

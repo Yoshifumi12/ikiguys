@@ -25,7 +25,7 @@ const WelcomeSection = () => {
     >
       <div className="mx-auto flex min-w-[200px] max-w-[1260px] flex-col items-center justify-between md:flex-row-reverse">
         <motion.img
-          src="logo.png"
+          src="nutribite-4.png"
           className="mt-28 h-64 max-h-[400px] rounded-lg px-8 md:mt-20 md:h-[510px] md:w-1/2 xl:px-0"
           initial="hidden"
           animate="visible"
@@ -59,9 +59,10 @@ const WelcomeSection = () => {
             animate="visible"
             variants={textVariants}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
-            rhoncus justo. Donec nulla mi, condimentum dignissim sapien
-            imperdiet, ultrices interdum risus. Morbi finibus ultricies neque.
+            Nutribite is a testament to hard work, secret recipe, and
+            unparalleled flavor. Lovingly injected with our irresistible
+            homemade filling. We perfect every Nutribite with a delectable touch
+            of butter on top.
           </motion.div>
 
           <Link href="/order">

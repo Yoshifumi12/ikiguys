@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -42,17 +42,15 @@ const AboutSection = () => {
           </p>
 
           <p className="lg: max-w-[590px] text-sm font-light text-gray-50 sm:text-sm xl:text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
-            rhoncus justo. Donec nulla mi, condimentum dignissim sapien
-            imperdiet, ultrices interdum risus. Morbi finibus ultricies neque.
-            Vestibulum mollis ante sit amet felis iaculis, at venenatis justo
-            pharetra. Pellentesque ut tincidunt lorem, vitae scelerisque mauris.
-            Suspendisse elementum laoreet placerat. Etiam hendrerit elit lorem,
-            vitae feugiat metus vehicula id. In venenatis faucibus congue. Ut
-            metus massa, fermentum sed mauris non, congue pretium libero.
-            Suspendisse potenti. Mauris fermentum vitae lacus non sodales. Etiam
-            euismod orci mi, eu elementum dolor molestie a. Cras facilisis
-            iaculis maximus.
+            Nutribite is dedicated to revolutionizing the bread market by
+            offering products that prioritize quality, affordability, and
+            convenience. Our goal is to create bread that not only satisfies
+            your taste buds but also supports your nutritional needs. By using
+            wholesome ingredients and innovative baking techniques, Nutribite
+            ensures that each piece is packed with essential nutrients, making
+            it a healthier choice. Nutribite’s bread is designed to enhance your
+            meals with delicious flavors and valuable nutrition, all at a price
+            that fits your budget.{" "}
           </p>
         </motion.div>
       </div>

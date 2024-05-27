@@ -22,7 +22,7 @@ const Mission = () => {
         </div>
         <div className="w-full px-6 md:w-1/2 md:max-w-[580px] xl:ml-20 xl:px-0">
           <img
-            src="placeholder.png"
+            src="ikiguys.png"
             alt="Mission"
             className="h-[345px] w-full rounded-lg"
           />

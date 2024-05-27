@@ -95,12 +95,7 @@ const Order: React.FC = () => {
       <OrderSection />
 
       {/* Bread Section */}
-      <div
-        style={{
-          backgroundImage: "url('mission-bg.png')",
-          backgroundSize: "cover",
-        }}
-      >
+      <div>
         <div className="mx-auto mt-6 flex max-w-[1230px] flex-col items-center md:flex-row md:py-[94px] lg:mt-1 px-4 md:px-0">
           <div className="w-full flex-col items-center justify-center md:w-1/2">
             <p className="mb-2 mt-4 text-2xl font-medium text-gray-800 sm:text-3xl md:mt-0 md:text-4xl lg:text-5xl">
@@ -171,12 +166,7 @@ const Order: React.FC = () => {
 
       {/* Filling Section */}
       {chosenNumber.value != 0 && (
-        <div
-          style={{
-            backgroundImage: "url('filling-bg.png')",
-            backgroundSize: "cover",
-          }}
-        >
+        <div>
           <div className="mx-auto mt-6 flex max-w-[1230px] flex-col items-center md:flex-row-reverse md:py-[94px] lg:mt-1 px-4 md:px-0">
             <div className="w-full flex-col items-center justify-center md:w-1/2">
               <p className="mb-2 mt-4 text-2xl font-medium text-gray-800 sm:text-3xl md:mt-0 md:text-4xl lg:text-5xl">
@@ -196,11 +186,20 @@ const Order: React.FC = () => {
               <p className="mb-2 mt-4 text-2xl font-medium text-gray-800 sm:text-3xl md:mt-0 md:text-4xl lg:text-5xl">
                 Choose Flavor
               </p>
-              <img
-                src=""
-                className="h-[345px] w-full rounded-lg object-cover"
-                alt=""
-              />
+              {chosenFilling.length === 0 && (
+                <img
+                  src="placeholder.png"
+                  className="h-[345px] w-full rounded-lg object-cover"
+                  alt=""
+                />
+              )}
+              {chosenFilling.length > 0 && (
+                <img
+                  src={chosenFilling[0].image}
+                  className="h-[345px] w-full rounded-lg object-cover"
+                  alt=""
+                />
+              )}
             </div>
           </div>
 

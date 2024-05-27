@@ -1,22 +1,22 @@
 export const fillingNumberData = [
   {
     name: "Plain",
-    image: "placeholder.png",
+    image: "plain.png",
     value: 0,
   },
   {
     name: "Single",
-    image: "placeholder.png",
+    image: "filling.png",
     value: 1,
   },
   {
     name: "Double",
-    image: "placeholder.png",
+    image: "filling.png",
     value: 2,
   },
   {
     name: "Triple",
-    image: "placeholder.png",
+    image: "filling.png",
     value: 3,
   },
 ];
