@@ -17,6 +17,6 @@ export const fillingData = [
   },
   {
     name: "Strawberry",
-    image: "strawberry.png",
+    image: "strawberry.jpg",
   },
 ];
