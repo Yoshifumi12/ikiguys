@@ -11,7 +11,7 @@ const Vision = () => {
       <div className="mx-auto mt-6 flex max-w-[1230px] flex-col-reverse items-center md:flex-row md:py-[94px] lg:mt-1">
         <div className="w-full px-6 md:w-1/2 md:max-w-[580px] xl:ml-20 xl:pr-10">
           <img
-            src="vision.png"
+            src="Vision.png"
             alt="Mission"
             className="h-[345px] w-full rounded-lg"
           />
